@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - One Big, Ugly Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <span class="company-name">Cam's Company</span>
+    <span class="company-page">Checkout</span>
+  </header>
+  <section class="progress-bar">
+    <progress value="80" max="100" data-label="Checkout">Checkout</progress>
+  </section>
+  <form>
+    <section class="form">
+      <h3>This is the last step ...</h3>
+      <h3>Please enter your billing information</h3>
+      <label class="left" for="bill-name">Name
+        <span class="left2"><input type="text" id="bill-name" name="name" autocomplete required></span></label><br/>
+      <label class="left" for="bill-address1">Address 1
+        <span class="left2"><input type="text" id="bill-address1" name="billaddr1" autocomplete required></span></label><br/>
+      <label class="left" for="bill-address2">Address 2
+        <span class="left2"><input type="text" id="bill-address2" name="billaddr2" autocomplete required></span></label><br/>
+      <label class="left" for="bill-city">City
+        <span class="left2"><input type="text" id="bill-city" name="city" autocomplete required></span></label><br/>
+      <label class="left" for="bill-state">State
+        <span class="left2"><input type="text" id="bill-state" name="billstate" autocomplete required></span></label><br/>
+      <label class="left" for="bill-pcode">Postal Code
+        <span class="left2"><input type="text" id="bill-pcode" name="billpcode" pattern="\d{5}(-\d{4})?" autocomplete required></span></label><br/>
+      <label class="left" for="bill-country">Country
+        <span class="left2"><input type="text" id="bill-country" name="billcountry" autocomplete required></span></label><br/><br/><br/><br/><br/>
+
+      <h3>Please enter your credit card information</h3>
+      <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+      <label class="left" for="cc-name">Name
+        <span class="left2"><input type="text" id="cc-name" name="name" autocomplete required></span></label><br/>
+      <label class="left" for="cc-number">Credit Card #
+        <span class="left2"><input type="text" id="cc-number" name="ccnumber" pattern="[0-9]{16}" autocomplete required></span>
+      </label>
+      <label id="cc-type-label">
+        <select id="cc-type" name="cc">
+          <option>Visa</option>
+          <option>American Express</option>
+          <option>Mastercard</option>
+          <option>Discover</option>
+        </select>
+      </label>
+      <label class="left" for="expdate">Exp Date
+        <span class="left2"><input type="text" id="expdate" name="expdate" placeholder="MM/YY" pattern="[01][0-9]/[12][0-9]"></span>
+      </label>
+      <label class="left" for="cvv">CVV
+        <span class="left2"><input type="number" id="cvv" name="cvv" placeholder="999" pattern="[0-9]{3}"></span><br/><br/><br/>
+      </label>
+      <div>
+        <label class="left" id="bill-address-label" for="use-bill-address">Use Billing Address for Shipping Address?
+          <span class="left2"><input type="checkbox" id="use-bill-address" name="usebilladdress" checked></span>
+        </label>
+      </div>
+<!--    <label>Name
+      <input type="text" id="bill-name" autocomplete required>
+    </label>
+    <label>Address Line 1
+      <input type="text">
+    </label>
+    <label>Address Line 2
+      <input type="text">
+    </label>
+    <label>City
+      <input type="text">
+    </label>
+    <label>State/Province
+      <input type="text">
+    </label>
+    <label>Postal Code
+      <input type="text">
+    </label>
+    <label>Country
+      <input type="text">
+    </label>   -->
+      <label class="left" for="email">Email
+        <span class="left2"><input type="email" id="email" name="email" placeholder="abc@xy.com" autocomplete></span>
+      </label><br/><br/><br/><br/><br/><br/><br/>
+    </section>
+    <br/><br/>
+    <section class="order-review">
+      <h3>Please review your order</h3>
+      <table class="your-order">
+        <tr class="headings">
+          <td>Product</td>
+          <td>Quantity</td>
+          <td>Price</td>
+          <td>Total</td>
+        </tr>
+        <tr>
+          <td>Game Console 2015</td>
+          <td>1</td>
+          <td>$500.00</td>
+          <td>$500.00</td>
+        </tr>
+        <tr>
+          <td>Platformer Bros 3D</td>
+          <td>1</td>
+          <td>$50.00</td>
+          <td>$50.00</td>
+        </tr>
+        <tr class="total">
+          <td>Total</td>
+          <td></td><td></td>
+          <td>$550.00</td>
+        </tr>
+      </table>
+      <label class="check-correct">Is your order correct?
+        <input type="checkbox" class="check-correct-input">
+      </label>
+      <input id="submit" type="submit">
+    </section>
+  </form>
+  <script src="camscompany.js">
+  </script>
+</body>
+</html>
